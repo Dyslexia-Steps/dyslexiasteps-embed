@@ -40,7 +40,6 @@ export class DyslexiaStepsGame extends HTMLElement {
     const a = document.createElement("a");
     a.href = ORIGIN + (lang === "en" ? "/" : `/${lang}`);
     a.target = "_blank";
-    a.rel = "noopener";
     a.textContent = "Dyslexia Steps";
     credit.append(`${CREDIT[lang]} `, a);
 
