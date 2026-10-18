@@ -46,9 +46,24 @@ Using Vue, Svelte or Angular? Import the package once on the client and use `<dy
 | Option (script / component) | Values | Default |
 |---|---|---|
 | `data-dys-game` / `game` | `listen`, `build`, `choice`, `dictation` | required |
-| `data-list` / `list` | the word list: an id such as `short-a` (English) or the list page name such as `palabras-con-m` (other languages) | required |
+| `data-list` / `list` | the word list id, such as `short-a` (English) or `palabras-con-m` (Spanish). **All ids are in [CATALOG.md](CATALOG.md)**; every id is also the last part of the list page's address, e.g. `dyslexiasteps.com/cvc-words/short-a` | required |
 | `data-lang` / `lang` | `en`, `de`, `es`, `fr`, `nl`, `pt-br` | `en` |
 | `data-size` / `size` | `compact` (360 px), `standard` (480 px), `wide` (720 px) | `standard` |
+
+## Which `list` do I use? (find the id)
+
+1. Open **[CATALOG.md](CATALOG.md)**: every list id for every language, with the games that exist for it (listen, build, choice, dictation). Copy the id from the first column.
+2. Or open the **[code builder](https://dyslexiasteps.com/embed)**, pick the game, language and list from the buttons, and copy the finished code.
+3. Or read it from code: [`catalog.json`](catalog.json) (also at <https://docs.dyslexiasteps.com/embed-catalog.json>) lists `games → language → [{ list, title, page }]`.
+
+Examples that exist today:
+
+| What you want | Code |
+|---|---|
+| English short-a words, listen game | `data-dys-game="listen" data-list="short-a"` |
+| German words with "sch", build game | `data-dys-game="build" data-lang="de" data-list="woerter-mit-sch"` |
+| German dictation, grade 1 | `data-dys-game="dictation" data-lang="de" data-list="diktat-klasse-1"` |
+| German "seid oder seit" sentence game | `data-dys-game="choice" data-lang="de" data-list="seid-oder-seit"` |
 
 ## Games and languages
 
